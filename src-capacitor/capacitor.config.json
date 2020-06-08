@@ -1,7 +1,0 @@
-{
-  "appId": "fr.jolieboutique.app",
-  "appName": "jolieboutique",
-  "bundledWebRuntime": false,
-  "npmClient": "yarn",
-  "webDir": "www"
-}
