@@ -8,7 +8,10 @@
     <!-- If the user is logged -->
     <div>
 
-
+      <!-- Header -->
+      <div class="header-container text-center">
+        <p>JolieBoutique</p>
+      </div>
 
       <!-- Menu -->
       <div class="menu-container">
@@ -16,7 +19,6 @@
           <i :class="link.icon"></i>
           <p>{{link.title}}<span>•</span></p>
         </router-link>
-        </a>-->
       </div>
     </div>
 

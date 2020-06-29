@@ -3,22 +3,24 @@
 /** GLOBAL VARIABLES **/
 body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f9f9f9;
 }
 .bg-secondary{
     background-color: $secondary;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 
 /** MENU **/
 .menu-container{
-    background-color: $primary;
-    position: fixed;
-    bottom:0px;
-    width:100vw;
-    height:8vh;
-    -webkit-box-shadow: 0px -5px 9px -3px rgba(122,122,122,0.35);
-    -moz-box-shadow: 0px -5px 9px -3px rgba(122,122,122,0.35);
-    box-shadow: 0px -5px 9px -3px rgba(122,122,122,0.35);
+  background-color: $primary;
+  position: fixed;
+  bottom:0px;
+  width:100vw;
+  height:8vh;
+  border-top:1px solid #d9d9d9;
 }
 .menu-item{
     width: 33.33%;
@@ -73,6 +75,23 @@ body {
 
 }
 
+/** HEADER **/
+.header-container{
+  background-color: $primary;
+  position: fixed;
+  top:0;
+  width:100vw;
+  height:8vh;
+  border-bottom:1px solid #d9d9d9;
+
+  p{
+    font-size: 22px;
+    font-weight: 500;
+    position: relative;
+    top:15px;
+  }
+}
+
 /** LOGO **/
 .logo-big{
     width:40vw;
@@ -98,4 +117,29 @@ body {
 .btn-custom{
     background-color:$primary;
     color:$secondary;
+}
+
+
+/** Homepage */
+.subtitle{
+  margin-top:80px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.category-icon{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border:1px solid $secondary;
+
+  i{
+    font-size:22px;
+    color:$secondary;
+    position: relative;
+    top:14px;
+  }
+}
+
+.category-container{
+  overflow-y: scroll;
 }
