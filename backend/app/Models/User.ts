@@ -1,7 +1,7 @@
-import {BaseModel, column, hasMany} from "@ioc:Adonis/Lucid/Orm";
-import Address from "App/Models/Address";
-import {HasMany} from "@ioc:Adonis/Lucid/Relations";
-import { DateTime } from "luxon";
+import {BaseModel, column, hasMany} from '@ioc:Adonis/Lucid/Orm'
+import Address from 'App/Models/Address'
+import {HasMany} from '@ioc:Adonis/Lucid/Relations'
+import { DateTime } from 'luxon'
 
 export default class User extends BaseModel {
   @column({isPrimary: true})

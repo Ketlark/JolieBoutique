@@ -1,4 +1,4 @@
-import {BaseModel, column} from "@ioc:Adonis/Lucid/Orm";
+import {BaseModel, column} from '@ioc:Adonis/Lucid/Orm'
 
 export default class Product extends BaseModel {
   @column({isPrimary: true})
@@ -12,6 +12,9 @@ export default class Product extends BaseModel {
 
   @column()
   public price: number
+
+  @column()
+  public description: string
 
   @column()
   public imageURL: string

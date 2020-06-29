@@ -9,6 +9,7 @@ export default class Products extends BaseSchema {
       table.integer('category_id').notNullable()
       table.string('name').notNullable()
       table.decimal('price').notNullable()
+      table.string('description').notNullable().defaultTo('Description par défaut')
       table.string('image_url').notNullable()
       table.boolean('is_on_top').notNullable().defaultTo(false)
     })

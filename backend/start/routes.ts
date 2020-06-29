@@ -29,8 +29,8 @@ import HealthCheck from '@ioc:Adonis/Core/HealthCheck'
 Route.get('/product', 'ProductsController.index')
 Route.get('/product/:id', 'ProductsController.show')
 
+Route.get('/categories/:id', 'CategoriesController.index')
 Route.get('/categories/list', 'CategoriesController.list')
-
 
 Route.get('health', async ({ response }) => {
   const report = await HealthCheck.getReport()
