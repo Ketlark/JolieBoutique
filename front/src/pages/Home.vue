@@ -30,7 +30,7 @@
           <div class="product-image" :style="{ 'background-image': 'url(' + product.image_url + ')' }">
           </div>
           <p class="product-name">{{product.name}}</p>
-          <p class="product-price text-right">{{product.price}}</p>
+          <p class="product-price">{{product.price}}€</p>
         </router-link>
       </div>
     </div>
