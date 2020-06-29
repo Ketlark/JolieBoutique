@@ -1,1 +1,101 @@
 // app global css in SCSS form
+
+/** GLOBAL VARIABLES **/
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.bg-secondary{
+    background-color: $secondary;
+}
+
+
+/** MENU **/
+.menu-container{
+    background-color: $primary;
+    position: fixed;
+    bottom:0px;
+    width:100vw;
+    height:8vh;
+    -webkit-box-shadow: 0px -5px 9px -3px rgba(122,122,122,0.35);
+    -moz-box-shadow: 0px -5px 9px -3px rgba(122,122,122,0.35);
+    box-shadow: 0px -5px 9px -3px rgba(122,122,122,0.35);
+}
+.menu-item{
+    width: 33.33%;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    color:$secondary;
+    text-decoration: none!important; 
+    font-weight: bold;
+
+    i{
+        font-size:20px;
+        position: relative;
+        bottom:8px;
+    }
+
+    p{
+        display: none;
+        
+        span{
+            display: none;
+        }
+    }
+
+
+    &:hover{
+        color:$secondary;
+    }
+}
+
+.menu-item-active{
+    color:$tertiary;
+
+    i{
+        display: none;
+    }
+
+    p{
+        margin-top:15px;
+        display: block;
+        line-height:16px;
+        
+        span{
+            font-size:10px;
+            display: block;
+        }
+    }
+
+    &:hover{
+        color:$tertiary;
+    }
+
+}
+
+/** LOGO **/
+.logo-big{
+    width:40vw;
+    margin-top:20vh;
+}
+
+/** FORMS **/
+.bg-secondary-form{
+    label, a {
+        color:white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    small{
+        color:white;
+    }
+}
+.errors{
+    color:white;
+}
+
+/** BUTTONS **/
+.btn-custom{
+    background-color:$primary;
+    color:$secondary;
+}

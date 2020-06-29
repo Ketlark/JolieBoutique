@@ -2,11 +2,15 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/General.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      { path: '', component: () => import('pages/Home.vue') },
+      { path: 'cart', component: () => import('pages/Cart.vue') },
+      { path: 'account', component: () => import('pages/Account.vue') },
+      { path: 'login', component: () => import('pages/Login.vue') },
+      { path: 'register', component: () => import('pages/Register.vue') }
     ]
-  }
+  },
 ]
 
 // Always leave this as last one
