@@ -26,7 +26,6 @@ export default {
   name: 'General',
   data () {
     return {
-      userData: null,
       currentTab: "",
       essentialLinks: [
         {

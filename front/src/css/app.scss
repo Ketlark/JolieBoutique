@@ -16,9 +16,9 @@ body {
     bottom:0px;
     width:100vw;
     height:8vh;
-    -webkit-box-shadow: 0px -5px 9px -3px rgba(122,122,122,0.35);
+    /*-webkit-box-shadow: 0px -5px 9px -3px rgba(122,122,122,0.35);
     -moz-box-shadow: 0px -5px 9px -3px rgba(122,122,122,0.35);
-    box-shadow: 0px -5px 9px -3px rgba(122,122,122,0.35);
+    box-shadow: 0px -5px 9px -3px rgba(122,122,122,0.35);*/
 }
 .menu-item{
     width: 33.33%;
@@ -26,7 +26,7 @@ body {
     height: 100%;
     text-align: center;
     color:$secondary;
-    text-decoration: none!important; 
+    text-decoration: none!important;
     font-weight: bold;
 
     i{
@@ -37,7 +37,7 @@ body {
 
     p{
         display: none;
-        
+
         span{
             display: none;
         }
@@ -60,7 +60,7 @@ body {
         margin-top:15px;
         display: block;
         line-height:16px;
-        
+
         span{
             font-size:10px;
             display: block;
