@@ -1,5 +1,4 @@
-import {BaseCommand} from '@adonisjs/ace/build'
-import Product from 'App/Models/Product'
+import { BaseCommand } from '@adonisjs/ace/build'
 
 export default class SeedDB extends BaseCommand {
   public static commandName = 'seed:shop'
@@ -28,6 +27,7 @@ export default class SeedDB extends BaseCommand {
   public async handle () {
     const Database = (await import('@ioc:Adonis/Lucid/Database')).default
     const Category = (await import('App/Models/Category')).default
+    const Product = (await import('App/Models/Product')).default
 
     this.logger.info('Seeding launched.')
 

@@ -17,7 +17,8 @@
     "vue-i18n": "^8.0.0"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0"
+    "@quasar/app": "^1.0.0",
+    "dotenv": "^8.2.0"
   },
   "engines": {
     "node": ">= 10.18.1",

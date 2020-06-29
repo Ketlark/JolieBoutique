@@ -52,10 +52,10 @@ export default {
   },
   methods:{
     getData(){
-      this.$axios.get('http://localhost:3333/categories/list')
-      .then(response => (this.categories = response.data))
+      this.$axios.get(process.env.API_URL + '/categories')
+        .then(response => (this.categories = response.data))
 
-      this.$axios.get('http://localhost:3333/product')
+      this.$axios.get(process.env.API_URL + '/product')
         .then(response => (this.products = response.data))
     }
   }

@@ -5,6 +5,7 @@
 
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
+const envparser = require('./config/envparser')
 
 module.exports = function (/* ctx */) {
     return {
@@ -12,7 +13,7 @@ module.exports = function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
     boot: [
-      
+
       'i18n',
       'axios',
     ],
@@ -69,6 +70,7 @@ module.exports = function (/* ctx */) {
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       vueRouterMode: 'history', // available values: 'hash', 'history'
+      env: envparser(),
 
       // rtl: false, // https://quasar.dev/options/rtl-support
       // preloadChunks: true,
