@@ -19,7 +19,7 @@ body {
   position: fixed;
   bottom:0px;
   width:100vw;
-  height:8vh;
+  height:10vh;
   border-top:1px solid #d9d9d9;
 }
 .menu-item{
@@ -30,6 +30,7 @@ body {
     color:$secondary;
     text-decoration: none!important;
     font-weight: bold;
+    position: relative;
 
     i{
         font-size:20px;
@@ -59,7 +60,7 @@ body {
     }
 
     p{
-        margin-top:15px;
+        margin-top:20px;
         display: block;
         line-height:16px;
 
@@ -81,14 +82,14 @@ body {
   position: fixed;
   top:0;
   width:100vw;
-  height:8vh;
+  height:10vh;
   border-bottom:1px solid #d9d9d9;
 
   p{
     font-size: 22px;
     font-weight: 500;
     position: relative;
-    top:15px;
+    top:35px;
   }
 }
 
@@ -122,7 +123,7 @@ body {
 
 /** Homepage */
 .subtitle{
-  margin-top:80px;
+  margin-top:100px;
   font-weight: 500;
   font-size: 18px;
 }
