@@ -14,6 +14,7 @@
           <p>{{link.title}}<span>•</span></p>
         </a>
       </div>
+      <router-link to="cart" style="position:absolute;top:200px;left:50px;">Bonjour</router-link>
     </div>
 
     </q-layout>
@@ -48,11 +49,15 @@ export default {
   },
   methods:{
     checkCurrentTab(currentItemName){
+        console.log(this.currentTab, currentItemName)
         if(this.currentTab == currentItemName) return true;
         return false;
     },
     changeMenu(){
       this.currentTab = this.$router.currentRoute.path;
+    },
+    changeTabTest() {
+      this.currentTab = "/cart"
     }
   },
   beforeMount(){
