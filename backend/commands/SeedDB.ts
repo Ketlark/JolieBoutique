@@ -1,4 +1,5 @@
 import {BaseCommand} from "@adonisjs/ace/build";
+import Product from "App/Models/Product";
 
 export default class SeedDB extends BaseCommand {
   public static commandName = 'seed:shop'
@@ -43,17 +44,63 @@ export default class SeedDB extends BaseCommand {
       },
       {
         id: 1,
-        name: 'Pantalon',
+        name: 'Sweatshirt',
         icon: 'fas fa-tshirt'
       },
       {
         id: 2,
+        name: 'Pantalon',
+        icon: 'fas fa-tshirt'
+      },
+      {
+        id: 3,
         name: 'Lunettes',
+        icon: 'fas fa-tshirt'
+      },
+      {
+        id: 4,
+        name: 'Chaussures',
+        icon: 'fas fa-tshirt'
+      },
+      {
+        id: 5,
+        name: 'Chaussettes',
+        icon: 'fas fa-tshirt'
+      },
+      {
+        id: 6,
+        name: 'Vestes',
+        icon: 'fas fa-tshirt'
+      },
+      {
+        id: 7,
+        name: 'Casquettes',
+        icon: 'fas fa-tshirt'
+      },
+      {
+        id: 8,
+        name: 'Bracelets',
         icon: 'fas fa-tshirt'
       }
     ])
-
     this.logger.info("Categories seeded !")
+
+    this.logger.info("Start products seed !")
+    await Product.createMany([
+      {id: 0, categoryId: 0, name: "T-Shirt Blanc", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true},
+      {id: 1, categoryId: 0, name: "T-Shirt Noir", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true},
+      {id: 2, categoryId: 0, name: "T-Shirt Rouge", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true},
+      {id: 3, categoryId: 0, name: "T-Shirt Jaune", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true},
+      {id: 4, categoryId: 0, name: "T-Shirt Vert", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true},
+      {id: 5, categoryId: 0, name: "T-Shirt Bleu", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true},
+      {id: 6, categoryId: 0, name: "T-Shirt Rose", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true},
+      {id: 7, categoryId: 0, name: "T-Shirt Orange", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true},
+      {id: 8, categoryId: 0, name: "T-Shirt Marron", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true},
+      {id: 9, categoryId: 0, name: "T-Shirt Cyan", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true},
+      {id: 10, categoryId: 0, name: "T-Shirt Gris", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true},
+      {id: 11, categoryId: 0, name: "T-Shirt Violet", price: 14.99, imageURL: "https://images-na.ssl-images-amazon.com/images/I/81vzc0ciKwL._AC_UX679_.jpg", isOnTop: true}
+    ])
+    this.logger.info("Products seeded !")
 
     await Database.manager.closeAll()
     this.logger.success('Seed finished.')
