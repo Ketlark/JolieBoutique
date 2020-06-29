@@ -7,14 +7,17 @@
 
     <!-- If the user is logged -->
     <div>
+
+
+
       <!-- Menu -->
       <div class="menu-container">
-        <a :href="link.link" class="menu-item" :class="{'menu-item-active': checkCurrentTab(link.link)}" v-for="link in essentialLinks">
+        <router-link @click.native="changeTab(link.link)" :to="link.link" class="menu-item" v-for="link in essentialLinks" :class="{'menu-item-active': checkCurrentTab(link.link)}">
           <i :class="link.icon"></i>
           <p>{{link.title}}<span>•</span></p>
-        </a>
+        </router-link>
+        </a>-->
       </div>
-      <router-link to="cart" style="position:absolute;top:200px;left:50px;">Bonjour</router-link>
     </div>
 
     </q-layout>
@@ -49,15 +52,15 @@ export default {
   },
   methods:{
     checkCurrentTab(currentItemName){
-        console.log(this.currentTab, currentItemName)
         if(this.currentTab == currentItemName) return true;
         return false;
     },
     changeMenu(){
       this.currentTab = this.$router.currentRoute.path;
+      console.log(this.currentTab);
     },
-    changeTabTest() {
-      this.currentTab = "/cart"
+    changeTab(newTab){
+      this.currentTab = newTab;
     }
   },
   beforeMount(){
