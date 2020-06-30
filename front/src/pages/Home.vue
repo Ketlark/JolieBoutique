@@ -6,13 +6,13 @@
       <!-- Title -->
       <div class="row justify-content-center">
         <div class="col-11 text-left">
-          <p class="subtitle">Catégories</p>
+          <p class="subtitle margin-top">Catégories</p>
         </div>
       </div>
       <!-- Icons -->
       <div class="row justify-content-center category-container">
         <div class="col-11 d-flex">
-          <router-link to="#" class="category-link" v-for="category in categories">
+          <router-link :to="{ name: 'category', params: { id: category.id, category: category.name }}" class="category-link" v-for="category in categories">
             <div class="category-icon text-center">
               <i :class="category.icon"></i>
             </div>
@@ -26,7 +26,7 @@
         <div class="col-11 text-left">
           <p class="subtitle" style="margin-top:20px;">À la une</p>
         </div>
-        <router-link to="#" class="mb-5 product-container" v-for="(product, index) in products" :class="{'col-10' : index == 0, 'col-5' : index != 0}">
+        <router-link :to="{ name: 'product-detail', params: { id: product.id }}" class="mb-5 product-container" v-for="(product, index) in products" :class="{'col-10' : index == 0, 'col-5' : index != 0}">
           <div class="product-image" :style="{ 'background-image': 'url(' + product.image_url + ')' }">
           </div>
           <p class="product-name">{{product.name}}</p>

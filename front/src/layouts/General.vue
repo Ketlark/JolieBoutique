@@ -59,7 +59,6 @@ export default {
     },
     changeMenu(){
       this.currentTab = this.$router.currentRoute.path;
-      console.log(this.currentTab);
     },
     changeTab(newTab){
       this.currentTab = newTab;

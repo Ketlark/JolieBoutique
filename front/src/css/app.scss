@@ -11,7 +11,9 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-
+.margin-top{
+  margin-top:100px;
+}
 
 /** MENU **/
 .menu-container{
@@ -123,7 +125,6 @@ body {
 
 /** Homepage */
 .subtitle{
-  margin-top:100px;
   font-weight: 500;
   font-size: 18px;
 }
@@ -152,6 +153,8 @@ body {
   text-decoration: none!important;
   min-width: 90px;
 }
+
+/** PRODUCT **/
 .product-container{
   min-height: 130px;
   text-decoration: none!important;
@@ -174,4 +177,23 @@ body {
   position: absolute;
   left: 15px;
   top: 145px;
+}
+.product-description{
+  text-align: justify;
+}
+.add-cart-button{
+  width: 90vw;
+  margin-left:5vw;
+  position: absolute;
+  bottom: 12vh;
+  height: 50px;
+  background-color: $secondary;
+  border-radius: 25px;
+
+  p{
+    margin-top:10px;
+    color: $primary;
+    font-size: 18px;
+    font-weight: 700;
+  }
 }

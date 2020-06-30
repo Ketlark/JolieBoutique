@@ -8,10 +8,12 @@ const routes = [
       { path: 'cart', component: () => import('pages/Cart.vue') },
       { path: 'account', component: () => import('pages/Account.vue') },
       { path: 'login', component: () => import('pages/Login.vue') },
-      { path: 'register', component: () => import('pages/Register.vue') }
+      { path: 'register', component: () => import('pages/Register.vue') },
+      { path: 'product/:id', component: () => import('pages/Product.vue'), name: 'product-detail' },
+      { path: 'category/:id/:category', component: () => import('pages/Category.vue'), name: 'category' }
     ]
   },
-]
+];
 
 // Always leave this as last one
 if (process.env.MODE !== 'ssr') {
