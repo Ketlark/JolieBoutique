@@ -52,6 +52,18 @@
     picomatch "^2.2.2"
     slash "^3.0.0"
 
+"@adonisjs/auth@^4.2.4":
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/@adonisjs/auth/-/auth-4.2.4.tgz#ead082ff0b4e2402f65b77fde88b47572a504842"
+  integrity sha512-ovVeYMXKed0YYd/uQ+izCJU5YEvYU5/Tp5GZ35SCSgbPmjCzDa25ylWe2DoXyiJ6MQ0dEOD/LDTJykhgAoqNtg==
+  dependencies:
+    "@poppinss/hooks" "^1.0.5"
+    "@poppinss/utils" "^2.2.7"
+    array-to-sentence "^2.0.0"
+    hashids "^2.2.1"
+    luxon "^1.24.1"
+    pluralize "^8.0.0"
+
 "@adonisjs/bodyparser@^4.0.4":
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@adonisjs/bodyparser/-/bodyparser-4.0.4.tgz#85eee4064812bd55a45a952a9bf895add43346be"
@@ -209,6 +221,16 @@
     cuid "^2.1.8"
     jest-worker "^26.0.0"
 
+"@adonisjs/session@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@adonisjs/session/-/session-3.0.4.tgz#fb14fba61e46154ac2e311a55896788cb7ae1329"
+  integrity sha512-L5V8u+ZJEo6ppWEPjTFC+VTvUNaDxs1jvky5LHkZofB9Ry/u51qqWtOBCqC+zCcP7UyxrzM2HKLm6uj0JDjn4w==
+  dependencies:
+    "@poppinss/utils" "^2.2.7"
+    cuid "^2.1.8"
+    fs-extra "^9.0.1"
+    ms "^2.1.2"
+
 "@adonisjs/sink@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@adonisjs/sink/-/sink-3.0.2.tgz#a3dd6dff30ae53a578f7bb7f61ed738ba9981253"
@@ -280,6 +302,11 @@
   resolved "https://registry.yarnpkg.com/@kdf/salt/-/salt-1.0.1.tgz#977787a409187ff2bfcadcac374e6430d1fbee48"
   integrity sha512-hLZjuL0+VwSdT0R7srD3GInKyEibEAnUDHI1IQ5QDa4PRof98vujxKWtvukOtv+0ZWeSOxmuFmo80QMTHyvgMQ==
 
+"@kdf/salt@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@kdf/salt/-/salt-2.0.1.tgz#2d355a764524fa85217609addc376084b71de385"
+  integrity sha512-1RBY7HcGYuWBm0+4ygjdRerN+mhpuT5picGB6+azqUXsz/IZljegrKkeHRiV6wuxY8n4HrxOuw8ou7JuGxRWdQ==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -299,6 +326,11 @@
   integrity sha512-JWtZ5P1bfXU0bAtTzCpOLYHDXuxSVdtL/oqz4+xa97h8w9E5IlVN333wugXVFv8vZ1hbXObKQf1ptXmFFcMByg==
   dependencies:
     safe-buffer "^5.1.2"
+
+"@phc/format@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@phc/format/-/format-1.0.0.tgz#b5627003b3216dc4362125b13f48a4daa76680e4"
+  integrity sha512-m7X9U6BG2+J+R1lSOdCiITLLrxm+cWlNI3HUFA92oLO77ObGNzaKdh8pMLqdZcshtkKuV84olNNXDfMc4FezBQ==
 
 "@poppinss/chokidar-ts@^2.0.6":
   version "2.0.6"
@@ -672,6 +704,11 @@ array-slice@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/array-slice/-/array-slice-1.1.0.tgz#e368ea15f89bc7069f7ffb89aec3a6c7d4ac22d4"
   integrity sha512-B1qMD3RBP7O8o0H2KbrXDyB0IccejMF15+87Lvlor12ONPRHP6gTjXMNkt/d3ZuOGbAe66hFmaCfECI24Ufp6w==
+
+array-to-sentence@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/array-to-sentence/-/array-to-sentence-2.0.0.tgz#1e57691fdc18ba24a47e3ebabda9324baac960b4"
+  integrity sha512-rflEVg2oIxO0XgL5erRPr8GlInIORqIXrep6+b9RyrvztFcrawqIOxbWR5hYy1v7KzNvTWsSdHe8D9/XZ/rbMw==
 
 array-union@^1.0.2:
   version "1.0.2"
@@ -1942,6 +1979,11 @@ has-yarn@^2.1.0:
   resolved "https://registry.yarnpkg.com/has-yarn/-/has-yarn-2.1.0.tgz#137e11354a7b5bf11aa5cb649cf0c6f3ff2b2e77"
   integrity sha512-UqBRqi4ju7T+TqGNdqAO0PaSVGsDGJUBQvk9eUWNGRY1CFGDzYhLWoM7JQEemnlvVcv/YEmc2wNW8BC24EnUsw==
 
+hashids@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/hashids/-/hashids-2.2.1.tgz#ad0c600f0083aa0df7451dfd184e53db34f71289"
+  integrity sha512-+hQeKWwpSDiWFeu/3jKUvwboE4Z035gR6FnpscbHPOEEjCbgv2px9/Mlb3O0nOTRyZOw4MMFRYfVL3zctOV6OQ==
+
 haye@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/haye/-/haye-2.0.2.tgz#758043af17e3d5014cece82a3fc23525d4704ff3"
@@ -3145,6 +3187,16 @@ phc-argon2@^1.0.0:
     argon2 "^0.26.2"
     tsse "^1.1.4"
 
+phc-argon2@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/phc-argon2/-/phc-argon2-1.0.10.tgz#f75c9991351a5e5915c5ea4806a32eb5b5866493"
+  integrity sha512-dB+XgNNzs2byEM+YdiNi2D5jjuQwengarv5sxHFsjtTKdVwu0GwQNR134+88sjjLivViepnpGgp/XRsM2SvwNA==
+  dependencies:
+    "@kdf/salt" "^2.0.1"
+    "@phc/format" "^1.0.0"
+    argon2 "^0.26.2"
+    tsse "^2.0.0"
+
 phc-bcrypt@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/phc-bcrypt/-/phc-bcrypt-1.0.0.tgz#5900380660825d72555870145a15d39385b01cb9"
@@ -3972,6 +4024,13 @@ tsse@^1.1.4, tsse@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/tsse/-/tsse-1.1.6.tgz#65169b45e48cb92560aa6283a692a6bede1cc34e"
   integrity sha512-DxL05+CPR7NwsmFWLEe/lRvTH2zo0//7rlYLPCUlDWE+4XEfMXhObJh+mm5vwA9pXBGSzmmnT9zCl596XKCtfA==
+  dependencies:
+    safe-buffer "^5.1.1"
+
+tsse@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/tsse/-/tsse-2.0.0.tgz#757a1357473fecaffb5c70024acd179514779f64"
+  integrity sha512-KiYDxhCTbCUQWXtCSF2OWafC71C/ZUZP6TyCh/w7nPjzY1ZLY70KtDSfmePs3H4vSdxQotqdJvAkGAofxsQ05w==
   dependencies:
     safe-buffer "^5.1.1"
 

@@ -1,4 +1,4 @@
-import {BaseModel, column} from "@ioc:Adonis/Lucid/Orm";
+import {BaseModel, column} from '@ioc:Adonis/Lucid/Orm'
 
 export default class Address extends BaseModel {
   @column({isPrimary: true})
@@ -15,7 +15,4 @@ export default class Address extends BaseModel {
 
   @column()
   public street: string
-
-  @column()
-  public cp: string
 }
