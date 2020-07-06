@@ -215,3 +215,31 @@ body {
     font-size: 70px;
   }
 }
+
+/** PROFILE **/
+.edit-profile-button{
+  height: 50px;
+  background-color: $primary;
+  border-radius: 30px;
+  border:1px solid $tertiary;
+
+  p{
+    margin-top:15px;
+    color: $tertiary;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+.show-parcels-button{
+  height: 50px;
+  background-color: $secondary;
+  border-radius: 30px;
+  border:none;
+
+  p{
+    margin-top:15px;
+    color: $primary;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
