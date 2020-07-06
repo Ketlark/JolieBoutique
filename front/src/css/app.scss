@@ -184,16 +184,34 @@ body {
 .add-cart-button{
   width: 90vw;
   margin-left:5vw;
-  position: absolute;
+  position: fixed;
   bottom: 12vh;
   height: 50px;
   background-color: $secondary;
   border-radius: 25px;
+  border:none;
 
   p{
     margin-top:10px;
     color: $primary;
     font-size: 18px;
     font-weight: 700;
+  }
+}
+
+/** CART **/
+.delete-from-cart{
+  color:#e74c3c;
+  font-size: 20px;
+  position: relative;
+  top:10px;
+}
+.empty-cart{
+  font-size:20px;
+  opacity: 0.2;
+  font-weight: 800;
+
+  i{
+    font-size: 70px;
   }
 }

@@ -15,12 +15,13 @@
         </div>
       </div>
     </div>
-    <div class="add-cart-button text-center"><p>Ajouter au panier</p></div>
+    <button class="add-cart-button text-center" v-on:click="addToCart()"><p>Ajouter au panier</p></button>
 
   </q-page>
 </template>
 
 <script>
+  import {mapState} from 'vuex';
   export default {
     name: 'Product',
     data(){
@@ -35,7 +36,16 @@
       getData(){
         this.$axios.get(process.env.API_URL + '/product/' + this.$route.params.id)
           .then(response => (this.product = response.data[0]));
+      },
+      addToCart(){
+        this.$store.dispatch('ADD_DATA', this.product);
+        this.$router.push("/cart");
       }
-    }
+    },
+    computed: {
+      ...mapState({
+        cartData: state => state.cart.data
+      })
+    },
   }
 </script>
