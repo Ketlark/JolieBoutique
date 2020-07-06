@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex">
-    <div class="container margin-top">
+    <div class="container margin-top" v-if="isLogged">
       <div class="row justify-content-center" style="margin-bottom:200px; margin-top:80px;">
         <div class="col-10 text-center">
           <p><b>{{accountData.surname}} {{accountData.name}}</b><br>{{accountData.email}}</p>
@@ -11,6 +11,12 @@
         <button class="show-parcels-button text-center col-10"><p>Mes commandes</p></button>
       </div>
     </div>
+    <div v-else class="margin-top container">
+      <div class="row justify-content-center margin-top">
+        <p class="text-center mb-5">Veuillez-vous connecter pour accéder<br>à votre profil.</p>
+        <router-link :to="'login'" class="show-parcels-button text-center col-10"><p>Me connecter</p></router-link>
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -19,7 +25,8 @@ export default {
   name: 'Account',
   data(){
     return {
-      accountData:[]
+      accountData:[],
+      isLogged:false
     }
   },
   beforeMount() {
@@ -27,8 +34,14 @@ export default {
   },
   methods:{
     getData(){
-      this.$axios.get(process.env.API_URL + '/categories')
-        .then(response => (this.accountData = response.data))
+      this.$axios.get(process.env.API_URL + '/users/me')
+        .then(response => {
+          this.accountData = response.data
+          this.isLogged = true;
+        })
+        .catch(error => {
+          this.isLogged = false;
+        })
     }
   }
 }

@@ -23,7 +23,7 @@
                     </div>
                     <div class="form-group mt-5 text-center">
                         <button type="submit" class="btn btn-custom col-12 mb-3">Se connecter</button>
-                        <a href="/register">Je n'ai pas de compte</a>
+                        <router-link :to="'register'">Je n'ai pas de compte</router-link>
                     </div>
                 </form>
               </div>
@@ -56,9 +56,20 @@ export default {
         canPass = false;
       }
 
-      if(canPass) return true;
+      if(canPass) this.sendForm();
       e.preventDefault();
-      
+
+    },
+    sendForm(){
+      this.$axios.post(process.env.API_URL + '/users/login',{
+        email:this.email,
+        password:this.password
+      })
+      .then(response => this.$router.push("/account"))
+      .catch(error => {
+        this.errors = [];
+        this.errors.push("Identifiants invalides.")
+      })
     }
   }
 }

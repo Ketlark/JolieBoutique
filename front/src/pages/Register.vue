@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex bg-secondary">
-      <div class="container">
+      <div class="container" style="margin-bottom: 120px;">
 
           <!-- Logo -->
           <div class="row">
@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-group mt-5 text-center">
                         <button type="submit" class="btn btn-custom col-12 mb-3">S'inscrire</button>
-                        <a href="/login">J'ai déjà un compte</a>
+                        <router-link :to="'login'">J'ai déjà un compte</router-link>
                     </div>
                 </form>
               </div>
@@ -78,12 +78,12 @@ export default {
         this.errors.push("Merci d'entrer un e-mail valide.");
         canPass = false;
       }
-      if (!this.lastname || /^([a-z]+\s)*[a-z]+$/.test(this.lastname)) {
+      if (!this.lastname) {
         this.errors.push("Merci d'entrer un nom valide.");
         canPass = false;
       }
-      if (!this.firstname || /^([a-z]+\s)*[a-z]+$/.test(this.firstname)) {
-        this.errors.push("Merci d'entrer un nom valide.");
+      if (!this.firstname) {
+        this.errors.push("Merci d'entrer un prénom valide.");
         canPass = false;
       }
       if (!this.password || this.password.length < 6 || !this.password_confirmation) {
@@ -95,9 +95,24 @@ export default {
         canPass = false;
       }
 
-      if(canPass) return true;
+      if(canPass) this.sendForm();
       e.preventDefault();
-      
+
+    },
+    sendForm(){
+      this.$axios.post(process.env.API_URL + '/users/register',{
+        email:this.email,
+        password:this.password,
+        password_confirmation:this.password_confirmation,
+        surname:this.firstname,
+        name:this.lastname,
+
+      })
+        .then(response => this.$router.push("/account"))
+        .catch(error => {
+          this.errors = [];
+          this.errors.push("Identifiants invalides.")
+        })
     }
   }
 }
