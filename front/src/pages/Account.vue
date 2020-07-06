@@ -3,7 +3,7 @@
     <div class="container margin-top">
       <div class="row justify-content-center" style="margin-bottom:200px; margin-top:80px;">
         <div class="col-10 text-center">
-          <p><b>Prénom nom</b><br>adresse@email.com</p>
+          <p><b>{{accountData.surname}} {{accountData.name}}</b><br>{{accountData.email}}</p>
         </div>
       </div>
       <div class="row justify-content-center" style="margin-top:10px;">
@@ -16,6 +16,20 @@
 
 <script>
 export default {
-  name: 'Account'
+  name: 'Account',
+  data(){
+    return {
+      accountData:[]
+    }
+  },
+  beforeMount() {
+    this.getData();
+  },
+  methods:{
+    getData(){
+      this.$axios.get(process.env.API_URL + '/categories')
+        .then(response => (this.accountData = response.data))
+    }
+  }
 }
 </script>
