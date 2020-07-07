@@ -60,16 +60,16 @@ export default {
       e.preventDefault();
 
     },
-    sendForm(){
-      this.$axios.post(process.env.API_URL + '/users/login',{
+    async sendForm(){
+      const response = await this.$axios.post(process.env.API_URL + '/users/login',{
         email:this.email,
-        password:this.password
+        password:this.password,
+        remember: true
       })
-      .then(response => this.$router.push("/account"))
-      .catch(error => {
-        this.errors = [];
-        this.errors.push("Identifiants invalides.")
-      })
+
+      if(response.status == 200) {
+        await this.$router.push('/account')
+      }
     }
   }
 }

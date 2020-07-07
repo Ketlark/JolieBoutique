@@ -33,15 +33,15 @@ export default {
     this.getData();
   },
   methods:{
-    getData(){
-      this.$axios.get(process.env.API_URL + '/users/me')
-        .then(response => {
-          this.accountData = response.data
-          this.isLogged = true;
-        })
-        .catch(error => {
-          this.isLogged = false;
-        })
+    async getData(){
+      const response = await this.$axios.get(process.env.API_URL + '/users/me')
+
+      if(response.status == 200) {
+        this.accountData = response.data;
+        this.isLogged = true
+      } else {
+        await this.$router.push('/account')
+      }
     }
   }
 }

@@ -1,4 +1,9 @@
 import Vue from 'vue'
-import axios from 'axios'
 
-Vue.prototype.$axios = axios
+import axiosHttp from 'axios'
+
+export const axios = axiosHttp
+axios.defaults.headers.common['Content-Type'] = 'application/json'
+axios.defaults.withCredentials = true
+
+Vue.prototype.$axios = axiosHttp

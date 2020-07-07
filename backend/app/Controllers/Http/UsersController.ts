@@ -6,18 +6,19 @@ import Hash from '@ioc:Adonis/Core/Hash'
 
 export default class UsersController {
   public async show ({ auth }: HttpContextContract) {
+    console.log('user auth ->', auth.user)
     const user = User.query().where('id', auth.user!.id).first()
     return user
   }
 
-  public async login ({ auth, request, response }: HttpContextContract) {
+  public async login ({ auth, request, response, session }: HttpContextContract) {
     const data = await request.validate(LoginValidator)
     const remember = !!request.post().remember
 
-    const user = await User.query().where('email', data.email).first()
+    await auth.logout()
+    session.clear()
 
-    console.log(data.email, data.password)
-    console.log(user)
+    const user = await User.query().where('email', data.email).first()
 
     if (!user || user.email !== data.email || !(await Hash.verify(user.password, data.password))) {
       return response.internalServerError('Identifiants invalides.')
@@ -41,8 +42,7 @@ export default class UsersController {
     }
 
     await User.create(data)
-    const dataAuth = await auth.attempt(data.email, data.password)
-    console.log('Auth', dataAuth)
+    await auth.attempt(data.email, data.password)
 
     return response.ok('Vous vous êtes inscrit avec succès.')
   }
