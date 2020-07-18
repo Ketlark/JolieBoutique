@@ -10,4 +10,8 @@ export default class ProductsController {
     const product = Database.from('products').where('id', params.id)
     return product
   }
+
+  public async remove ({ params }: HttpContextContract) {
+    return Database.from('products').where('id', params.id).delete()
+  }
 }

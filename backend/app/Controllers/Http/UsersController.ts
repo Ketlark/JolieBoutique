@@ -46,4 +46,29 @@ export default class UsersController {
 
     return response.ok('Vous vous êtes inscrit avec succès.')
   }
+
+  public async remove ({ params }: HttpContextContract) {
+    const user = await User.find(params.id)
+    if(user) {
+      return user.delete()
+    } else {
+      return 'Utilisateur non trouvé'
+    }
+  }
+
+  public async editProfile ({ request }: HttpContextContract) {
+    const data = request.post()
+    const user = await User.find(data.id)
+
+    if(user) {
+      user.email = data.email || user.email
+      user.surname = data.surname || user.surname
+      user.name = data.name || user.name
+      user.password = data.password || user.password
+
+      return await user.save()
+    } else {
+      return 'Utilisateur non trouvé'
+    }
+  }
 }
