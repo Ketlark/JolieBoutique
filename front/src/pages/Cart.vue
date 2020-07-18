@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    <button class="add-cart-button text-center"  v-if="products.length > 0"><p>Payer {{total}}€</p></button>
+    <router-link :to="'payment'" class="add-cart-button text-center"  v-if="products.length > 0"><p>Payer {{total}}€</p></router-link>
   </q-page>
 </template>
 

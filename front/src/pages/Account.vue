@@ -7,8 +7,8 @@
         </div>
       </div>
       <div class="row justify-content-center" style="margin-top:10px;">
-        <button class="edit-profile-button text-center col-10 mb-3" v-on:click="addToCart()"><p>Modifier mon profil</p></button>
-        <button class="show-parcels-button text-center col-10"><p>Mes commandes</p></button>
+        <router-link :to="'editprofile'" class="edit-profile-button text-center col-10 mb-3"><p>Modifier mon profil</p></router-link>
+        <!--<button class="show-parcels-button text-center col-10"><p>Mes commandes</p></button>-->
       </div>
     </div>
     <div v-else class="margin-top container">
