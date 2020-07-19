@@ -3,10 +3,10 @@ import User from 'App/Models/User'
 import RegisterValidator from 'App/Validators/RegisterValidator'
 import LoginValidator from 'App/Validators/LoginValidator'
 import Hash from '@ioc:Adonis/Core/Hash'
+import Database from "@ioc:Adonis/Lucid/Database";
 
 export default class UsersController {
   public async show ({ auth }: HttpContextContract) {
-    console.log('user auth ->', auth.user)
     const user = User.query().where('id', auth.user!.id).first()
     return user
   }
@@ -70,5 +70,9 @@ export default class UsersController {
     } else {
       return 'Utilisateur non trouvé'
     }
+  }
+
+  public async getAll () {
+    return Database.from('users')
   }
 }

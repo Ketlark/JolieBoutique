@@ -25,6 +25,7 @@ import HealthCheck from '@ioc:Adonis/Core/HealthCheck'
   Product routes
  */
 Route.get('/product', 'ProductsController.index')
+Route.get('/products', 'productsController.getAll')
 Route.get('/product/:id', 'ProductsController.show')
 Route.get('/product/remove/:id', 'ProductsController.remove')
 
@@ -39,6 +40,7 @@ Route.post('/users/login', 'UsersController.login')
 Route.delete('/users/logout', 'UsersController.logout')
 Route.get('/users/remove/:id', 'UsersController.remove')
 Route.post('/users/edit', 'UsersController.editProfile')
+Route.get('/users', 'UsersController.getAll')
 
 Route.group(() => {
   Route.get('/users/me', 'UsersController.show')

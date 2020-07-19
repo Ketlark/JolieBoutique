@@ -14,4 +14,8 @@ export default class ProductsController {
   public async remove ({ params }: HttpContextContract) {
     return Database.from('products').where('id', params.id).delete()
   }
+
+  public async getAll () {
+    return Database.from('products')
+  }
 }

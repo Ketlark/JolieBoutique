@@ -12,7 +12,7 @@
           <!-- Login Form -->
           <div class="row justify-content-center mt-5">
               <div class="col-10">
-                  <form class="bg-secondary-form" @submit="checkForm" action="/todo" novalidate="true">
+                  <form class="bg-secondary-form" @submit="checkForm" action="/" novalidate="true">
                     <div class="form-group">
                         <label for="email">Adresse e-mail</label>
                         <input type="email" class="form-control" id="email" name="email" v-model="email">

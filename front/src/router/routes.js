@@ -15,6 +15,19 @@ const routes = [
       { path: 'payment', component: () => import('pages/Payment.vue')}
     ]
   },
+  {
+    path: '/admin/',
+    component: () => import('layouts/Admin'),
+    children: [
+      { path: '', component: () => import('pages/admin/Home.vue') },
+      {path: 'products', component: () => import('pages/admin/ProductList.vue')},
+      {path: 'products/add', component: () => import('pages/admin/ProductAdd.vue')},
+      {path: 'products/edit/:id', component: () => import('pages/admin/ProductEdit.vue'), name: 'product-edit'},
+      {path: 'users', component: () => import('pages/admin/UserList.vue')},
+      {path: 'users/add', component: () => import('pages/admin/UserAdd.vue')},
+      {path: 'users/edit/:id', component: () => import('pages/admin/UserEdit.vue'), name: 'user-edit'}
+    ]
+  }
 ];
 
 // Always leave this as last one
