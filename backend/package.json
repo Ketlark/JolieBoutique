@@ -24,6 +24,7 @@
     "@adonisjs/fold": "^6.0.0",
     "@adonisjs/lucid": "^8.2.2",
     "@adonisjs/session": "^3.0.4",
+    "got": "^11.5.1",
     "pg": "^8.2.1",
     "phc-argon2": "^1.0.10",
     "proxy-addr": "^2.0.6",
