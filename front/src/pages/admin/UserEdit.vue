@@ -47,13 +47,12 @@
       },
       async sendForm(e){
         e.preventDefault();
-        let id = this.$route.params.id;
         const response = await this.$axios.post(process.env.API_URL + '/users/edit/',{
-          email:document.getElementById('email'),
-          surname:document.getElementById('surname'),
-          name:document.getElementById('name'),
-          password:document.getElementById('password'),
-          id:id,
+          email:document.getElementById('email').value,
+          surname:document.getElementById('surname').value,
+          name:document.getElementById('name').value,
+          password:document.getElementById('password').value,
+          id:this.$route.params.id,
         })
           .then(response => this.$router.push("/admin/users"))
       }

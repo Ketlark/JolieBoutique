@@ -46,11 +46,11 @@
       async sendForm(e){
         e.preventDefault();
         const response = await this.$axios.post(process.env.API_URL + '/products/add',{
-          name:document.getElementById('name'),
+          name:document.getElementById('name').value,
           category_id:0,
-          price:document.getElementById('price'),
-          description:document.getElementById('description'),
-          image_url:document.getElementById('image_url'),
+          price:document.getElementById('price').value,
+          description:document.getElementById('description').value,
+          image_url:document.getElementById('image_url').value,
           is_on_top:false,
         })
 

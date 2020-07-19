@@ -39,12 +39,12 @@
     methods:{
       async sendForm(e){
         e.preventDefault();
-        const response = await this.$axios.post(process.env.API_URL + '/users/add',{
-          email:document.getElementById('email'),
-          surname:document.getElementById('surname'),
-          name:document.getElementById('name'),
-          password:document.getElementById('password'),
-          password_confirmation:document.getElementById('password_confirmation'),
+        const response = await this.$axios.post(process.env.API_URL + '/users/register',{
+          email:document.getElementById('email').value,
+          surname:document.getElementById('surname').value,
+          name:document.getElementById('name').value,
+          password:document.getElementById('password').value,
+          password_confirmation:document.getElementById('password_confirmation').value,
         })
 
         if(response.status == 200) {

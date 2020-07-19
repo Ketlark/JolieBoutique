@@ -48,10 +48,10 @@
       async sendForm(e){
         e.preventDefault();
         const response = await this.$axios.post(process.env.API_URL + '/products/edit/',{
-          name:document.getElementById('name'),
-          price:document.getElementById('price'),
-          description:document.getElementById('description'),
-          image_url:document.getElementById('image_url'),
+          name:document.getElementById('name').value,
+          price:document.getElementById('price').value,
+          description:document.getElementById('description').value,
+          image_url:document.getElementById('image_url').value,
           id:this.$route.params.id,
         })
           .then(response => this.$router.push("/admin/products"))
