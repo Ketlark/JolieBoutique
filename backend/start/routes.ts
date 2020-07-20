@@ -28,6 +28,8 @@ Route.get('/product', 'ProductsController.index')
 Route.get('/products', 'productsController.getAll')
 Route.get('/product/:id', 'ProductsController.show')
 Route.get('/product/remove/:id', 'ProductsController.remove')
+Route.post('/product/add', 'ProductsController.add')
+Route.post('/product/edit', 'ProductsController.editProduct')
 
 Route.get('/categories/:id', 'CategoriesController.index')
 Route.get('/categories', 'CategoriesController.list')
