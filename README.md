@@ -1,6 +1,6 @@
 # jolieboutique (jolieboutique)
 
-Sample store app
+FRONT :
 
 ## Install the dependencies
 ```bash
@@ -12,11 +12,37 @@ yarn
 quasar dev
 ```
 
+### Start the app in development mode from iOS Device (hot-code reloading, error reporting, etc.)
+```bash
+quasar dev -m capacitor -T
+```
+
 
 ### Build the app for production
 ```bash
 quasar build
 ```
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+BACKEND :
+
+Install PostGreeSQL App, create a local database 'shop' and a user 'admin'
+
+## Install the dependencies
+```bash
+yarn
+```
+
+You need to run seed before run the backend
+
+## Run seed
+```bash
+node ace seed:shop
+```
+
+## Run backend
+```bash
+node ace serve --watch
+```
+```
+
+
