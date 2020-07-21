@@ -1,18 +1,18 @@
 # jolieboutique (jolieboutique)
 
-### FRONT :
+# FRONT :
 
-# Install the dependencies
+### Install the dependencies
 ```bash
 yarn
 ```
 
-# Start the app in development mode (hot-code reloading, error reporting, etc.)
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
 quasar dev
 ```
 
-# Start the app in development mode from iOS Device (hot-code reloading, error reporting, etc.)
+### Start the app in development mode from iOS Device (hot-code reloading, error reporting, etc.)
 ```bash
 quasar dev -m capacitor -T
 ```
@@ -23,10 +23,10 @@ quasar dev -m capacitor -T
 quasar build
 ```
 
-### BACKEND :
+# BACKEND :
 
-## Install PostGreeSQL App, create a local database and a user
-# Find the database config in backend, 'backend/app/.env', you will get the following content :
+### Install PostGreeSQL App, create a local database and a user
+Find the database config in backend, 'backend/app/.env', you will get the following content :
 ```
 PORT=3333
 HOST=0.0.0.0
@@ -42,19 +42,19 @@ SESSION_DRIVER=cookie
 
 Replace the database variables with your own
 
-# Install the dependencies
+### Install the dependencies
 ```bash
 yarn
 ```
 
 You need to run seed before run the backend
 
-# Run seed
+### Run seed
 ```bash
 node ace seed:shop
 ```
 
-# Run backend
+### Run backend
 ```bash
 node ace serve --watch
 ```
